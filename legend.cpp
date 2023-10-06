@@ -313,7 +313,7 @@ void animate()
     switch (direction)
     {
     case 'k':
-        if (loop_number < 2010)
+        if (loop_number < 1010)
         {
             glDisable(GL_LIGHT0);
             glDisable(GL_LIGHT1);
@@ -347,20 +347,20 @@ void animate()
             ty = stod(value10);
             axrot = stod(value11);
             h = ActualHeight();
-            if (loop_number < 2010)
+            if (loop_number < 1010)
                 moving = 1;
         }
         break;
 
     case 'w':
-        if (loop_number < 1010)
+        if (loop_number < 760)
         {
             glDisable(GL_LIGHT0);
             glDisable(GL_LIGHT1);
             glDisable(GL_LIGHT2);
             glEnable(GL_LIGHT3);
             loop_number++;
-            xpos += 0.01;
+            xpos += 0.007;
             getline(fin, line);
             stringstream ss(line);
             std::string value1, value2, value3, value4, value5, value6, value7, value8;
@@ -382,13 +382,14 @@ void animate()
             hlka = stod(value8);
             axrot = 0;
             h = ActualHeight();
-            if (loop_number < 1010)
+            if (loop_number < 760)
                 moving = 1;
         }
+        cout << h << endl;
         break;
 
     case 'm':
-        if (loop_number < 5050)
+        if (loop_number < 2040)
         {
             camX = 50, camY = 5, camZ = 80.0;
             loop_number++;
@@ -414,13 +415,14 @@ void animate()
             hlka = 25;
             axrot = -5;
             h = ActualHeight();
-            if (loop_number < 5050)
+            if (loop_number < 2040)
                 moving = 1;
         }
+        cout << h << endl;
         break;
     }
 
-    if (loop_number >= 1010 && !kick && !moon)
+    if (loop_number >= 760 && !kick && !moon)
     {
         moving = 0;
         fin.close();
@@ -431,7 +433,7 @@ void animate()
             direction = 's';
         }
     }
-    if (loop_number >= 2010 && kick && !moon)
+    if (loop_number >= 1010 && kick && !moon)
     {
         moving = 0;
         fin.close();
@@ -442,7 +444,7 @@ void animate()
             direction = 's';
         }
     }
-    if (loop_number >= 5050 && !kick && moon)
+    if (loop_number >= 2040 && !kick && moon)
     {
         moving = 0;
         fin.close();
@@ -470,10 +472,10 @@ void display()
         0.0f, 1.0f, 0.0f);
 
     GLUquadric *quadric = gluNewQuadric();
-
+    
     glPushMatrix(); // whole set
     glTranslatef(0, 8, 0);
-    //glTranslatef(0, h/24, move1);
+        glTranslatef(0, h/42, 0);
     if (direction == 'k') {
         glTranslatef(0, ty, xpos+tx);
     }
@@ -481,7 +483,7 @@ void display()
         glTranslatef(0,0,xpos);
     }
     glRotatef(axrot, -1, 0, 0);
-
+        glColor3f(1.000, 0.894, 0.710);
         glPushMatrix(); // abdomen
 
             glPushMatrix(); // neck
@@ -618,6 +620,13 @@ void display()
     glPopMatrix(); // whole set
 
     gluDeleteQuadric(quadric);
+    glColor3f(0.5, 0.5, 0.5);
+    glBegin(GL_QUADS);
+    glVertex3f(100, -15.5, 100);
+    glVertex3f(-100, -15.5, 100);
+    glVertex3f(-100, -15.5, -100);
+    glVertex3f(100, -15.5, -100);
+    glEnd();
     glFlush();
 }
 

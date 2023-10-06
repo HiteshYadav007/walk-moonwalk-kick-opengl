@@ -21,7 +21,7 @@ hleftun=0
 hleftlo=0
 hleftln=0
 
-steps=100
+steps=75
 
 generated_data=[[]]
 
@@ -79,6 +79,7 @@ def generateData():#rl,lg,rh,lh
     data.append([40,-25,-10,-2.5,-10,15,5,22.5])
     data.append([25,-10,-15,-5,-15,10,10,30])
     data.append([15,-5,-15,-5,-10,5,10,27.5])
+    
     # data.append([45,-5,-45,-5])
     # data.append([0,0,0,-45])
     # data.append([-45,0,45,-45])
