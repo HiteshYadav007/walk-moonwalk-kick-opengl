@@ -30,7 +30,7 @@ abdRn  = 0
 
 steps = 100
 
-generated_data = [[]]
+generated_data = []
 
 
 def assign(old, new):
