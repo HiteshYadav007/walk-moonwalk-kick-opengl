@@ -23,7 +23,7 @@ hleftln=0
 
 steps=75
 
-generated_data=[[]]
+generated_data=[]
 
 def assign(old,new):
     global rightuo,rightun,rightlo,rightln,leftln,leftlo,leftun,leftuo,hrightuo,hrightun,hrightlo,hrightln,hleftln,hleftlo,hleftun,hleftuo
