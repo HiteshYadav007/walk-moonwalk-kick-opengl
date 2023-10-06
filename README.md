@@ -15,10 +15,5 @@ Compile and run the main code file to experience the skeletal system interaction
 Use the specified keys ('W', 'K', 'M') to trigger various motions of the skeletal system.
 
 ## Demo 
-![Screenshot 2023-10-06 174713](https://github.com/HiteshYadav007/walk-moonwalk-kick-opengl/assets/97785257/7a3a80ed-c7c4-4fd3-8936-c4672aa3e215)
-
-![Screenshot 2023-10-06 174820](https://github.com/HiteshYadav007/walk-moonwalk-kick-opengl/assets/97785257/c1654a95-48ae-4903-84ba-3bb50727e8a1)
-
-
 https://github.com/HiteshYadav007/walk-moonwalk-kick-opengl/assets/97785257/ca5c721d-e3fd-49ab-8cb6-caf7b2af8df7
 
